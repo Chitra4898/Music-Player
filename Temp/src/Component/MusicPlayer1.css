@@ -1,0 +1,137 @@
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 15px;
+}
+
+.music-player {
+  background: rgb(0, 0, 0);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 380px;
+  margin: auto;
+  text-align: center;
+  box-shadow: 0px 0px 10px 2px rgb(192, 220, 250);
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.music-player:hover {
+  transform: scale(1.02);
+}
+
+.player-header h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.album-art {
+  display: flex;
+  justify-content: center;
+}
+
+.album-art img {
+  width: 300px;
+  height: 200px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.album-art img:hover {
+  transform: scale(1.05);
+}
+
+.track-info .track-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.track-info .track-artist {
+  font-size: 16px;
+  color: #ddd;
+  margin-bottom: 25px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.controls button {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.controls button:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.play-btn {
+  background: #1db954;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 30px;
+  padding: 14px 36px;
+  transition: background 0.3s;
+}
+
+.play-btn:hover {
+  background: #1ed760;
+}
+
+@media (max-width: 420px) {
+  .music-player {
+    padding: 20px;
+  }
+
+  .play-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+
+  .controls {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+.loop-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #1db954;
+  color: #1db954;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.loop-btn:hover {
+  background: #1db954;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.loop-btn.active {
+  background: #1db954;
+  color: white;
+  font-weight: bold;
+}
+
